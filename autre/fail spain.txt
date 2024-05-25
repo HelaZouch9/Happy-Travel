@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spain</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" href="icon1.png" type="image/x-icon">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fonction pour afficher l'élément en avant-plan et flouter le fond
+            function showOverlay(elementId) {
+                // Récupérer l'élément spécifique
+                var overlayElement = document.getElementById(elementId);
+                
+                // Afficher l'élément en avant-plan
+                overlayElement.style.display = 'block';
+        
+                // Appliquer le flou au fond
+                var mainContent = document.getElementById('main');
+                mainContent.style.filter = 'blur(5px)';
+            }
+        
+            // Fonction pour fermer l'overlay
+            function closeOverlay(elementId) {
+                // Cacher l'élément en avant-plan
+                var overlayElement = document.getElementById(elementId);
+                overlayElement.style.display = 'none';
+        
+                // Réinitialiser le flou du fond
+                var mainContent = document.getElementById('main');
+                mainContent.style.filter = 'none';
+            }
+        
+            // Associer les fonctions aux liens spécifiques
+            document.getElementById('11').addEventListener('click', function() { showOverlay('overlay11'); });
+            document.getElementById('12').addEventListener('click', function() { showOverlay('overlay12'); });
+            document.getElementById('21').addEventListener('click', function() { showOverlay('overlay21'); });
+            document.getElementById('22').addEventListener('click', function() { showOverlay('overlay22'); });
+            document.getElementById('32').addEventListener('click', function() { showOverlay('overlay32'); });
+            document.getElementById('41').addEventListener('click', function() { showOverlay('overlay41'); });
+            document.getElementById('42').addEventListener('click', function() { showOverlay('overlay42'); });
+            document.getElementById('51').addEventListener('click', function() { showOverlay('overlay51'); });
+            document.getElementById('52').addEventListener('click', function() { showOverlay('overlay52'); });
+            document.getElementById('61').addEventListener('click', function() { showOverlay('overlay61'); });
+            document.getElementById('62').addEventListener('click', function() { showOverlay('overlay62'); });
+        
+            // Associer la fonction de fermeture aux boutons de fermeture
+            var closeButtons = document.querySelectorAll('.close');
+            for (var i = 0; i < closeButtons.length; i++) {
+                closeButtons[i].addEventListener('click', function() { closeOverlay(this.dataset.overlay); });
+            }
+        });
+        </script>
+</head>
+<body>
+    <div id="bloc_page">
+        <header >
+
+            <div id="titre_principal">
+                <h1>Welcome To </br><span id="happy">Happy Travel</span></h1>
+                <img src="icon1.png">
+            </div>
+            
+            
+            <nav>
+                <ul>
+                    <li><a href="projet.html">Accueil</a></li>
+                    <li><a href="projet.html">Destinations</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div id="main">
+            <section>
+                <div id="partie1">
+                    <img src="barcelone/view.jpg">
+                    <p id="trans"></p>
+                    <p id="accroche">LET'S THE JOURNEY BEGIN</br>spain</p>
+                </div>
+                <!-- min houni nebda -->
+                <div id="partie2">
+                    <h1>why choosing Barcelone:</h1>
+                    <div id="description">
+                        <p>Spain is a diverse and culturally rich country located in southwestern Europe on the Iberian Peninsula.
+                            Known for its vibrant cities, stunning landscapes, and a rich history that spans centuries, Spain is 
+                            a popular destination for tourists worldwide.</p>
+                        <ul>
+                            <li>
+                                The capital city, Madrid, is a bustling metropolis known for its elegant boulevards, historic architecture, and world-class museums such as 
+                                the Prado Museum. Barcelona, situated on the northeastern coast, is famous for its unique Catalan culture, impressive Gaudí architecture, 
+                                and vibrant street life.
+                            </li>
+                            <li>
+                                Spain boasts a variety of landscapes, ranging from the golden beaches of the Costa del Sol to the rugged mountains of the Pyrenees. The southern region 
+                                of Andalusia is known for its Moorish-influenced architecture, flamenco music and dance, and iconic landmarks like the Alhambra in Granada.
+                            <li>
+                                The country is renowned for its festivals, with lively celebrations such as La Tomatina and Running of the Bulls attracting visitors 
+                                from around the globe. Spanish cuisine is diverse and delicious, with specialties like paella, tapas, and sangria.
+                            </li>
+
+                        </ul>
+                        <p>Whether you're interested in exploring historic sites, enjoying vibrant cultural experiences, or simply relaxing on beautiful beaches,
+                             Spain offers a wide range of attractions for every type of traveler.
+                        </p>
+                    </div>
+                    <h1>travel itinerary</h1>
+                    <div id="itinerary">
+                        <p>Discover a meticulously crafted journey with our agency, where nature, history, museums, nightlife, and culinary experiences seamlessly intertwine.
+                             Our thoughtfully organized itinerary spans seven days, offering detailed schedules for museum visits, nature exploration, delightful culinary adventures, 
+                            and vibrant nightlife. Immerse yourself in the richness of Spain with a curated program that ensures a fulfilling and diverse travel experience:</p>
+                        <div id="day1">
+                            <h2>Day 1: Arrival in Barcelona</h2>
+                            <ol type="1" start="1">
+                                <li>Morning (10:00 AM - 1:00 PM): Arrival and check-in to the hotel</li>
+                                <li>Afternoon (2:00 PM - 5:00 PM): Explore <a id="11"href="#"class="overlay" id="overlay11" >La Rambla</a> and <a id="12" href="#" class="overlay" id="overlay12">Gothic Quarter</a></li>
+                                <li>Evening (7:00 PM - 9:00 PM): Dinner at a local tapas restaurant</li>
+                            </ol>
+                        </div>
+                        <div id="day2">
+                            <h2>Day 2: Barcelona - Gaudi's Masterpieces</h2>
+                            <ol type="1" start="1">
+                                <li>Morning (9:00 AM - 12:00 PM): Visit <a id="21" href="#" class="overlay" id="overlay21">Sagrada Familia</a></li>
+                                <li>Afternoon (1:00 PM - 3:00 PM): Explore <a id="22" href="#" class="overlay" id="overlay22">Park Güell</a></li>
+                                <li>Evening (6:00 PM - 8:00 PM): Leisure time or optional <a id="23" href="#" class="overlay" id="overlay23">Flamenco show</a></li>
+                            </ol>
+                        </div>
+                        <div id="day3">
+                            <h2>Day 3: Barcelona - Maritime Adventures</h2>
+                            <ol type="1" start="1">
+                                <li>Morning (10:00 AM - 1:00 PM): Visit <a id="31" href="#" class="overlay" id="overlay31">Barcelona Aquarium</a></li>
+                                <li>Afternoon (2:00 PM - 4:00 PM): Relax at Barceloneta <a id="32" href="#" class="overlay" id="overlay32">Beach</a></li>
+                                <li>Evening (7:00 PM - 9:00 PM):<a id="33" href="#" class="overlay" id="overlay33">Sunset cruise along the coast</a></li>
+                            </ol>
+                        </div>
+                        <div id="day4">
+                            <h2>Day 4: Madrid - The Capital City</h2>
+                            <ol type="1" start="1">
+                                <li>Morning (9:00 AM - 12:00 PM): Travel to <a id="41" href="#" class="overlay" id="overlay41">Madrid</a></li>
+                                <li>Afternoon (1:00 PM - 4:00 PM): Explore <a id="42" href="#" class="overlay" id="overlay42">Retiro Park</a> and visit<a id="43" href="#" class="overlay" id="overlay43">Prado Museum</a></li>
+                                <li>Evening (7:00 PM - 9:00 PM): Dinner in <a id="44" href="#" class="overlay" id="overlay44">Plaza Mayor</a></li>
+                            </ol>
+                        </div>
+                        <div id="day5">
+                            <h2>Day 5: Madrid - Historical and Culinary Delights</h2>
+                            <ol type="1" start="1">
+                                <li>Morning (10:00 AM - 1:00 PM): Visit<a id="51" href="#" class="overlay" id="overlay51">Royal Palace</a></li>
+                                <li>Afternoon (2:00 PM - 5:00 PM): Stroll through <a id="52" href="#" class="overlay" id="overlay52">Puerta del Sol</a> and enjoy local cuisine</li>
+                                <li>Evening (8:00 PM - 10:00 PM): Attend a traditional Flamenco show</li>
+                            </ol>
+                        </div>
+                        <div id="day6">
+                            <h2>Day 6: Granada - The Alhambra</h2>
+                            <ol type="1" start="1">
+                                <li>Morning (9:00 AM - 12:00 PM): Travel to <a id="61" href="#" class="overlay" id="overlay61">Granada</a></li>
+                                <li>Afternoon (1:00 PM - 4:00 PM): Explore the<a id="62" href="#" class="overlay" id="overlay62">Alhambra</a></li>
+                                <li>Evening (6:00 PM - 8:00 PM): Discover the<a id="63" href="#" class="overlay" id="overlay63">Albayzín neighborhood</a></li>
+                            </ol>
+                        </div>
+                        <div id="day7">
+                            <h2>Day 7: Departure</h2>
+                            <ol type="1" start="1">
+                                <li>Morning (10:00 AM - 12:00 PM): Leisure time or last-minute shopping</li>
+                                <li>Afternoon: Check-out and departure</li>
+                            </ol>
+                        </div>
+                        <!-- Ajout des overlays pour chaque lien -->
+                        <div class="overlay" id="overlay11">
+                            <img src="barcelone/image11.jpg" alt="Overlay Image 11">
+                            <span class="close" data-overlay="overlay11">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay12">
+                            <img src="barcelone/image12.jpg" alt="Overlay Image 12">
+                            <span class="close" data-overlay="overlay12">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay21">
+                            <img src="barcelone/image21.jpg" alt="Overlay Image 21">
+                            <span class="close" data-overlay="overlay21">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay22">
+                            <img src="barcelone/image22.jpg" alt="Overlay Image 22">
+                            <span class="close" data-overlay="overlay22">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay23">
+                            <img src="barcelone/image23.jpg" alt="Overlay Image 23">
+                            <span class="close" data-overlay="overlay23">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay31">
+                            <img src="barcelone/image31.jpg" alt="Overlay Image 31">
+                            <span class="close" data-overlay="overlay31">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay32">
+                            <img src="barcelone/image32.jpg" alt="Overlay Image 32">
+                            <span class="close" data-overlay="overlay32">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay33">
+                            <img src="barcelone/image33.jpg" alt="Overlay Image 33">
+                            <span class="close" data-overlay="overlay33">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay41">
+                            <img src="barcelone/image41.jpg" alt="Overlay Image 41">
+                            <span class="close" data-overlay="overlay41">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay42">
+                            <img src="barcelone/image42.jpg" alt="Overlay Image 42">
+                            <span class="close" data-overlay="overlay42">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay43">
+                            <img src="barcelone/image43.jpg" alt="Overlay Image 43">
+                            <span class="close" data-overlay="overlay43">&times;</span>
+                        </div><div class="overlay" id="overlay44">
+                            <img src="barcelone/image44.jpg" alt="Overlay Image 44">
+                            <span class="close" data-overlay="overlay44">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay51">
+                            <img src="barcelone/image51.jpg" alt="Overlay Image 51">
+                            <span class="close" data-overlay="overlay51">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay52">
+                            <img src="barcelone/image52.jpg" alt="Overlay Image 52">
+                            <span class="close" data-overlay="overlay52">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay61">
+                            <img src="barcelone/image61.jpg" alt="Overlay Image 61">
+                            <span class="close" data-overlay="overlay61">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay62">
+                            <img src="barcelone/image62.jpg" alt="Overlay Image 62">
+                            <span class="close" data-overlay="overlay62">&times;</span>
+                        </div>
+                        <div class="overlay" id="overlay63">
+                            <img src="barcelone/image63.jpg" alt="Overlay Image 63">
+                            <span class="close" data-overlay="overlay63">&times;</span>
+                        </div>
+
+                    </div>
+                    <!-- na7kiw 3al programme w inejmo kol partie kima shoppin w nature w musems na3mlo 3liha des photos w video-->
+                    <!-- nzido div fiha des videos -->
+                    <!-- nzido fazet rating mt3 clients 9dom -->
+
+            </section>
+            <footer>
+                <div>
+                    <div id="info">
+                        <h3>More informations:</h3>
+                        <ul>
+                            <li><label>Our mail: </label><a href="mailto:happytravel@gmail.com">happytravel@gmail.com</a></li>
+                            <li><label>Our tel: </label><a href="tel:98656920">98656920</a></li>
+                            <li><a href="#">Our adresses</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div id="tab">
+                        <table>
+                            <caption>FOLLOW US</caption>
+                            <tr>
+                                <td>
+                                    <a href="#" title="page facebook">
+                                        <img src="footer/fcb.png" alt="fcb" />
+                                   </a>
+                                </td>
+                                <td>
+                                    <a href="#" title="page insta">
+                                        <img src="footer/insta.png" alt="insta" />
+                                   </a>
+                
+                                </td>
+                
+                                <td>
+                                    <a href="#" title="twitter">
+                                        <img src="footer/twitter.png" alt="twitter" />
+                                   </a>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+</body>
+</html>
